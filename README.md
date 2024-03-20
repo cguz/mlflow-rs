@@ -1,8 +1,8 @@
 # mlflow rust client
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/cguz/)
-[![Eclipse](https://img.shields.io/badge/-Eclipse-blueviolet)](https://eclipse.org/)
-[![Java](https://img.shields.io/badge/Java-ED8B00?&logo=java&logoColor=white)](https://www.rust-lang.org/)
+[![Visual Studio](https://img.shields.io/badge/VisualCode-blue?&logo=visualstudio)](https://code.visualstudio.com/)
+[![Rust](https://img.shields.io/badge/Rust-white?&logo=rust&logoColor=black)](https://www.rust-lang.org/)
 
 Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
 
