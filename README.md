@@ -1,8 +1,16 @@
-# mlflow-rs
+# mlflow rust client
 
-Rust library providing access to the MLflow REST API.
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com/cguz/)
+[![Eclipse](https://img.shields.io/badge/-Eclipse-blueviolet)](https://eclipse.org/)
+[![Java](https://img.shields.io/badge/Java-ED8B00?&logo=java&logoColor=white)](https://www.rust-lang.org/)
 
-This is **not** an official project.
+Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
+
+## Description
+
+This is a continuation of the [mlflow-rs](https://github.com/luleyleo/mlflow-rs) project, which is a Rust library providing access to the MLflow REST API. 
+
+Thus, all the credits for the original author!.
 
 # Example
 
