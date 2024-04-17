@@ -1,10 +1,11 @@
-use mlflow::{Client, backend::rest::Server, tracking::TrackingRun};
-use nanorand::{RNG, WyRand};
+use mlflow::{backend::rest::Server, tracking::TrackingRun, Client};
+use nanorand::{WyRand, RNG};
 
 fn main() {
     const EXPERIMENT: &str = "My Experiment";
     let mut client = Server::new("http://127.0.0.1:5000/api");
-    let experiment = client.get_experiment_by_name(EXPERIMENT)
+    let experiment = client
+        .get_experiment_by_name(EXPERIMENT)
         .map(|experiment| experiment.experiment_id)
         .or_else(|_| client.create_experiment(EXPERIMENT))
         .expect("Could neither get nor create the experiment");

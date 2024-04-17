@@ -62,14 +62,13 @@ enum RestMethod {
     Post,
 }
 impl RestMethod {
-    fn handler(&self) -> fn (&str) -> ureq::Request {
+    fn handler(&self) -> fn(&str) -> ureq::Request {
         match self {
             Self::Get => ureq::get,
             Self::Post => ureq::post,
         }
     }
 }
-
 
 pub struct Server {
     api_url: String,
@@ -109,10 +108,12 @@ impl Server {
         let url = format!("{}/{}", self.api_url, Ep::PATH);
 
         let http_response = if Ep::METHOD == RestMethod::Get {
-            let query_str = Ep::write_request_query_string(&request).context("serializing request failed")?;
+            let query_str =
+                Ep::write_request_query_string(&request).context("serializing request failed")?;
             Ep::METHOD.handler()(&url).query_str(&query_str).call()
         } else {
-            let buffer = Ep::write_request_body_string(&request).context("serializing request failed")?;
+            let buffer =
+                Ep::write_request_body_string(&request).context("serializing request failed")?;
             Ep::METHOD.handler()(&url).send_string(&buffer)
         };
 
